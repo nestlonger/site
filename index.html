@@ -32,26 +32,24 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         color: var(--text-primary);
         background: var(--ivory);
+        line-height: 1.6;
       }
 
       header {
-        padding: var(--space-m) var(--space-l);
-        background: var(--ivory);
-        border-bottom: 1px solid var(--linen-gray);
-        font-weight: 600;
-        color: var(--text-secondary);
+        padding: var(--space-m) 0;
         display: flex;
-        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid var(--linen-gray);
       }
 
       header img {
-        height: 32px;
+        height: 36px;
       }
 
       .container {
         max-width: 720px;
         margin: 0 auto;
-        padding: var(--space-xl) var(--space-m);
+        padding: var(--space-l) var(--space-m);
       }
 
       h1, h2 {
@@ -59,12 +57,27 @@
         color: var(--text-primary);
       }
 
-      p {
-        line-height: 1.5;
+      .hero {
+        text-align: center;
+        padding: var(--space-l) var(--space-m);
       }
 
-      .hero {
-        margin-bottom: var(--space-xl);
+      .hero p {
+        max-width: 580px;
+        margin: 0 auto;
+      }
+
+      .image-full {
+        width: 100%;
+        border-radius: 10px;
+        margin: var(--space-l) 0;
+      }
+
+      .image-stagger {
+        width: 70%;
+        border-radius: 10px;
+        margin: var(--space-l) auto;
+        display: block;
       }
 
       .module {
@@ -73,12 +86,10 @@
 
       ul {
         padding-left: var(--space-l);
-        margin-top: var(--space-m);
       }
 
       ul li {
         margin-bottom: var(--space-s);
-        color: var(--text-secondary);
       }
 
       .email-box {
@@ -115,21 +126,9 @@
         font-size: 14px;
       }
 
-      .image-row {
-        display: flex;
-        gap: var(--space-m);
-        margin-top: var(--space-l);
-      }
-
-      .image-row img {
-        width: 100%;
-        border-radius: 8px;
-        object-fit: cover;
-      }
-
       @media (max-width: 720px) {
-        .image-row {
-          flex-direction: column;
+        .image-stagger {
+          width: 100%;
         }
       }
     </style>
@@ -137,60 +136,75 @@
 
   <body>
     <header>
-      <img src="assets/logo.jpg" alt="NestLonger logo">
+      <img src="assets/logo.jpg" alt="NestLonger logo" />
     </header>
 
     <div class="container">
-      
+
       <!-- HERO -->
       <section class="hero">
         <h1>Stay in your home longer, with clarity and confidence</h1>
         <p>
-          NestLonger helps families understand their aging-in-place options,
-          assess risks early, and connect with trusted geriatric care
-          managers when support is needed.
+          NestLonger helps families understand the realities of aging in place,
+          anticipate home and care needs before they become urgent, and connect
+          with trusted geriatric care managers who can support long-term planning.
         </p>
       </section>
 
-      <!-- FEATURED IMAGES -->
-      <section class="module">
-        <div class="image-row">
-          <img src="assets/hero.jpg" alt="Older adult relaxing at home">
-          <img src="assets/fix.png" alt="Light switch repair">
-          <img src="assets/grabbar.jpg" alt="Bathroom grab bar safety">
-        </div>
-      </section>
+      <img src="assets/hero.jpg" alt="Older adult at home" class="image-full" />
 
-      <!-- VALUE PROP -->
+      <!-- WHAT WE HELP FAMILIES DO -->
       <section class="module">
         <h2>What we help families do</h2>
         <p>
-          It’s hard to know what your parent really needs, what’s urgent, and
-          who to trust. We bring calm and structure to an emotional, confusing
-          process.
+          Most families wait until a crisis before they start looking for help.
+          By then the decisions feel rushed, confusing, and emotionally charged.
+          NestLonger gives families a clearer path long before things get urgent.
+        </p>
+        <p>
+          We bring structure, education, and guidance so families can confidently
+          support a parent who wishes to stay in the home they love. Our tools and
+          resources help you anticipate the next stage, understand the options,
+          and avoid last-minute scrambles.
         </p>
         <ul>
-          <li>Spot home safety and mobility risks early</li>
-          <li>Understand care needs now vs. later</li>
-          <li>Explore options without overwhelm</li>
-          <li>Connect with vetted geriatric care managers</li>
+          <li>Spot home safety and mobility risks early with clear guidance</li>
+          <li>Understand care needs across the next few months and years</li>
+          <li>Explore home modifications and practical supports without overwhelm</li>
+          <li>Get connected with vetted geriatric care managers who specialize in aging in place</li>
         </ul>
       </section>
+
+      <img src="assets/fix.png" alt="Light switch repair" class="image-stagger" />
 
       <!-- WHO IT'S FOR -->
       <section class="module">
         <h2>Who it’s for</h2>
         <p>
-          Adult children, caregivers, and families helping a parent stay safely
-          in the home they love without guesswork, panic, or last-minute
-          scrambles.
+          NestLonger is for adult children, caregivers, and families trying to
+          help an aging parent remain safe, supported, and independent. Whether
+          you're noticing small changes or navigating a larger shift in health
+          or mobility, we give you tools to understand what matters now and what
+          is likely to matter next.
+        </p>
+        <p>
+          It’s also for families who simply want peace of mind. The earlier you
+          understand your parent’s needs and the home’s limitations, the more
+          options you have-and the more confidently everyone can move forward.
         </p>
       </section>
+
+      <img src="assets/grabbar.jpg" alt="Grab bar installation" class="image-stagger" />
 
       <!-- EMAIL CAPTURE -->
       <section class="module">
         <h2>Get early access</h2>
-        <p>We’re opening up the first version soon. Leave your email to hear when it’s ready.</p>
+        <p>
+          We’re opening up the first version soon. Early access members will be
+          able to try assessments, explore care guidance, and browse our growing
+          network of geriatric care managers. Leave your email below and we'll
+          notify you as soon as it’s ready.
+        </p>
         <div class="email-box">
           <input type="email" placeholder="you@example.com" />
           <button disabled>Notify me</button>
@@ -203,6 +217,8 @@
       <footer>
         NestLonger © 2025
       </footer>
+
     </div>
   </body>
 </html>
+
